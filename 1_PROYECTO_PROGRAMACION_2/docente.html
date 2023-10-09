@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Docentes | Ezio's Inscription System</title>
+    <link rel="icon" href="img/image.ico">
+    <link rel="stylesheet" href="libs/css/docente.css">
+    <script src="libs/js/jquery.js"></script>
+    <script src="libs/js/curd.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo" src="libs/img/Logo.png" alt="Logo">
+        </div>
+        </div>
+            <div class="nombre">
+             <h4>Control de Incripciones</h4>
+            <p align="center"><span>University</span></p>
+        </div>        
+        <nav>
+            <ul class="lista">
+                <li><a href="docente.html">Administrar Docente</a></li>
+                <li><a href="#">Estudiante</a></li>
+                <li><a href="#">Materias</a></li>
+                <li><a href="#">Secciones</a></li>
+                <li><a href="#">Periodos</a></li>
+                <li><a href="#">Usuarios</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button class="boton-salir"><a href="index.html">Salir</a></button>
+        </div>
+    </header>
+
+    <main>
+        <div class="titulo-docente">
+            <h2>Administrar Docente</h2>
+        </div>
+        <div class="container">
+            <h2>Asignar Materias a Docentes</h2>
+            <div class="seleccionar">
+                <label for="docente">Seleccionar Docente:</label>
+                <select id="docente">
+                    <option value="docente1">Docente 1</option>
+                    <option value="docente2">Docente 2</option>
+                    <option value="docente3">Docente 3</option>
+                </select>
+            </div>
+            <div class="contenedor-paralelo">
+                <div class="disponibles">
+                    <h3>Materias Disponibles:</h3>
+                    <div class="materia-list">
+                        <ul id="materias-disponibles">
+                            <li>
+                                <span class="nombre">Materia 1</span>
+                                <button class="agregar">+</button>
+                            </li>
+                            <li>
+                                <span class="nombre">Materia 2</span>
+                                <button class="agregar">+</button>
+                            </li>
+                            <li>
+                                <span class="nombre">Materia 3</span>
+                                <button class="agregar">+</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="asignadas">
+                    <h3>Materias Asignadas:</h3>
+                    <div class="materia-list">
+                        <ul id="materias-asignadas">
+                            <!-- Aquí se mostrarán las materias asignadas -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

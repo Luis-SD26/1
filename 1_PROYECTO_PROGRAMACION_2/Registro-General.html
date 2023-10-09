@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboar</title>
+    <link rel="stylesheet" href="css/prueba.1.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img id="logo" src="img/Logo.png" alt="Logo">
+        </div>
+        <div class="nombre">
+            <h4>Registro General</h4>
+            <p align="center"><span>University</span></p>
+        </div>
+        <nav>
+            <ul class="lista">
+                <li><a href="docente.html">Docente</a></li>
+                <li><a href="#">Estudiante</a></li>
+                <li><a href="#">Materias</a></li>
+                <li><a href="#">Secciones</a></li>
+                <li><a href="#">Periodos</a></li>
+                <li><a href="#">Usuarios</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button class="boton-salir"><a href="index.html">Salir</a></button>
+        </div>
+    </header>
+    <main>
+        <h2 align="center">Registro General</h2>
+        <section class="form-registro">
+            <h4>Formulario de Registro</h4>
+            <form id="registro-form">
+                <select id="Lista-seleccion-registro" class="Control">
+                    <option value="Estudiante">Estudiante</option>
+                    <option value="Docente">Profesor</option>
+                    <option value="Administrador">Administrador</option>
+                </select>
+                <input type="text" class="Control" placeholder="Nombre" id="nombre" required>
+                <input type="text" class="Control" placeholder="Apellido" id="apellido" required>
+                <input type="date" class="Control" id="Fecha" required>
+                <input type="email" class="Control" placeholder="Correo Electronico" id="email" required>
+                <input type="tel" class="Control" placeholder="Telefono Celular" id="telefono" required>
+                <p id="advertencia" style="color: red; display: none;">Falta un campo por rellenar.</p>
+                <p id="confirmacion" style="color: green; display: none;">Datos registrados con éxito.</p>
+                <button type="submit" class="Botons">Registrar</button> 
+            </form>
+        </section>
+    </main>
+    <footer class="copy">
+        <p> &copy; 2023 Ezio's Inscription System, Inc. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        const formularioRegistro = document.getElementById('registro-form');
+        const advertencia = document.getElementById('advertencia');
+        const confirmacion = document.getElementById('confirmacion');
+
+        formularioRegistro.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que se envíe el formulario automáticamente
+
+            // Obtén los valores de los campos
+            const seleccion = document.getElementById('Lista-seleccion-registro').value;
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const fecha = document.getElementById('Fecha').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+
+            // Valida si algún campo está vacío
+            if (!seleccion || !nombre || !apellido || !fecha || !email || !telefono) {
+                advertencia.style.display = 'block';
+                confirmacion.style.display = 'none';
+            } else {
+                advertencia.style.display = 'none';
+                confirmacion.style.display = 'none';
+
+                // Aquí puedes agregar la lógica para guardar los datos
+                // Puedes mostrar el mensaje de confirmación y agregar un efecto si lo deseas
+                // Por ejemplo, puedes mostrar el mensaje de confirmación durante unos segundos
+                // y luego redirigir al usuario a otra página.
+                confirmacion.style.display = 'block';
+                setTimeout(function() {
+                    formularioRegistro.reset(); // Limpiar el formulario
+                    confirmacion.style.display = 'none';
+                }, 3000); // Mostrar el mensaje de confirmación durante 3 segundos (3000 milisegundos)
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D9D9D9;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #52A7FF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    width: 90px;
+    height: 92px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#logo{
+    height: 90px;
+    width: 90px;
+    border-radius: 5px;
+}
+.nombre {
+    font-weight: none;
+    color: black;
+}
+
+span {
+    font-size: 20px;
+    font-family: Times new roman;
+}
+
+nav {
+    font-family: Helvetica;
+    font-weight: bold;
+}
+
+.lista {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.lista li {
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.lista li a {
+    text-decoration: none;
+    color: black;
+}
+
+.boton-salir {
+    background-color: #ff4500;
+    /* Rojo oscuro */
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 30px;
+    /* Ajustado a 10px para moverlo a la izquierda */
+}
+
+.boton-salir:hover {
+    background-color: #ff6347;
+    /* Rojo claro */
+}
+
+.contenedor-entradas {
+    height: 340px;
+    width: 1150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    background-color: #52A7FF;
+    border-radius: 30px;
+    font-family: 'Times new roman';
+    font-weight: bold;
+}
+.contederor-guardar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#Entrada {
+    width: 150px;
+    height: 30px;
+    margin: 20px;
+    background-color: #AFC1D0;
+    /* Azul */
+    border: solid black 2px;
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times new roman';
+}
+
+.boton:hover {
+    background-color: #005b9f;
+    /* Azul más oscuro */
+}
+
+.boton a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    margin-top: 150px;
+}
+
+.copy {
+    text-align: center;
+    font-family: times new roman;
+    font-style: italic;
+
+}
+.boton-enviar{
+    color: #FFFF;
+    background-color: #800080;
+    width: 90px;
+    height: 40px;
+    border: solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
